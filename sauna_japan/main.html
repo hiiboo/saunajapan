@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+<title>Sauna JAPAN</title>
+</head>
+<body>
+<!-- ヘッダー -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-header">
+  <div class="container">
+      <a class="navbar-brand" href="#">SAUNA JAPAN</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="#" id="news">NEWS</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./SaunaTimer/index.html" id="timer">Timer</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./map.html" id="saunamap">SaunaMap</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="" id="prof">
+                      <span id="uname"></span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="userDropdown">
+                      <a class="dropdown-item" href="#">Profile</a>
+                      <a class="dropdown-item" href="#">Settings</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#" id="Logout">Logout</a>
+                  </div>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav> 
+
+<!-- ニュースページ -->
+<div class="news">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <a href="https://life-designs.jp/webmagazine/dot-glamping/">
+        <img src="./image/image.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The best sauna with a view of Mt.Fuji</h5>
+            <p class="card-text">Fuji, a glamping facility where you can spend a relaxing time while enjoying the view of Mt Fuji.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <a href="https://www.timeout.jp/tokyo/ja/news/opening-of-the-largest-spa-sauna-in-the-kanto-area-introducing-japans-first-dragon-sauna-042722">
+        <img src="./image/30467-12-7e69c1a2cd801a5038696083ff9e3dbb-3900x2602-1.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Japan's first "Dragon Sauna</h5>
+          <p class="card-text">One of the largest thermal bath facilities in the Kanto region opens</p>
+        </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <a href="https://aumo.jp/articles/49879">
+        <img src="./image/1636619803.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">After work, go to "RAKU SPA 1010 Kanda"!</h5>
+          <p class="card-text">"RAKU SPA 1010 Kanda" in Kanda is a perfect facility to heal the fatigue after work!</p>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card">
+        <a href="https://goetheweb.jp/lifestyle/travel/20220507-moksa?heading=2">
+        <img src="./image/86A3956.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Born in Kyoto! Private sauna "Muan"</h5>
+          <p class="card-text">The inn “moksa” was completed this spring. Based on the concept of "regeneration", this place provides an experience to purify the mind and body.</p>
+        </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <a href="https://furosauna.com/2023/05/10/12359313/">
+        <img src="./image/img_355003_1.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Japan's first hemp sauna will debut in July 2023!</h5>
+          <p class="card-text">Japan's first hemp sauna will debut in July 2023 at "Koti Private SAUNA Cottage" in Toma Town, Hokkaido!</p>
+        </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <a href="https://harumari.tokyo/39155/">
+        <img src="./image/saunafes-EC.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">SAUNA FES JAPAN</h5>
+          <p class="card-text">Entertain the sauna. Finnish sauna festival "SAUNA FES JAPAN" will be held again this year</p>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- フッター -->
+<footer class="bg-info text-white py-3">
+    <div class="container">
+            <div class="col-md-6">HIBO.inc</div>
+            <div class="col-md-6 text-right"></div>
+    </div>
+</footer>
+
+<script type="module">
+
+// 必要なJSを読み込み
+import { initializeApp } 
+    from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+import { getDatabase, ref, push, set, onValue, onChildAdded, remove, onChildRemoved } 
+    from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } 
+    from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
+ 
+
+//FirebaseConfig [ KEYを取得して設定！！ ]
+const firebaseConfig = {
+    apiKey: "AIzaSyCgmxTOejJgNy7DqKDyxMS3xeY1y-mimkE",
+    authDomain: "world-chat-app-35e69.firebaseapp.com",
+    projectId: "world-chat-app-35e69",
+    storageBucket: "world-chat-app-35e69.appspot.com",
+    messagingSenderId: "186573768549",
+    appId: "1:186573768549:web:70d101c6c3a7601e6a438c"
+  };
+const app = initializeApp(firebaseConfig);
+
+
+//Firebase-RealtimeDatabase接続
+const db  = getDatabase(app); //RealtimeDBに接続
+
+
+//GoogleAuth用
+const provider = new GoogleAuthProvider();
+provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+const auth = getAuth();
+
+
+//Loginしていれば処理します
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        const uid = user.uid;
+        //ユーザー情報取得できます
+        if (user !== null) {
+            user.providerData.forEach((profile) => {
+                //Login情報取得
+                $("#uname").text(profile.displayName);
+                $("#prof").attr("src",profile.photoURL);
+                console.log("Sign-in provider: " + profile.providerId);
+                console.log("Provider-specific UID: " + profile.uid);
+                console.log("Email: " + profile.email);
+                console.log("Photo URL: " + profile.photoURL);
+            });
+            $("#status").fadeOut(500);
+        }
+
+        //データ登録(Click)
+        $("#send").on("click",function() {
+            const msg = {
+                title: $("#title").val(),
+                text:  $("#text").val()
+            }
+            const dbRef = ref( db, "users/"+uid+"/memo/"+$("#title").val() ); //RealtimeDB内の"chat"を使う
+            set(dbRef, msg);  //DBに値をセットする
+        });
+
+        //最初にデータ取得＆onSnapshotでリアルタイムにデータを取得
+        $("#title").on("change",function(){
+            const dbRef = ref( db, "users/"+uid+"/memo/"+$(this).val() ); //RealtimeDB内の"chat"を使う
+            onValue(dbRef, function(data){   
+                const msg  = data.val();    //オブジェクトデータを取得し、変数msgに代入
+                console.log(msg);
+                // const key  = data.key;      //データのユニークキー（削除や更新に使用可能）
+                $("#text").val(msg.text);
+            });
+        });
+
+    } else {
+        _redirect();  // User is signed out
+    }
+});
+
+
+//Logout処理
+$("#Logout").on("click", function () {
+    // signInWithRedirect(auth, provider);
+    signOut(auth).then(() => {
+        // Sign-out successful.
+        _redirect();
+    }).catch((error) => {
+        // An error happened.
+        console.error(error);
+    });
+});
+
+
+//Login画面へリダイレクト(関数作成)
+function _redirect(){
+    location.href="index.html";
+}
+
+</script>
+</body>
+</html>

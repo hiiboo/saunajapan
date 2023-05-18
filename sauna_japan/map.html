@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Map:Circle Event</title>
+<style>html,body{height:100%;}body{padding:0;margin:0;}h1{padding:0;margin:0;font-size:50%;}</style>
+</head>
+<body>
+
+
+<!-- MAP[START] -->
+<div id="myMap" style='width:100%;height:100%;float:left;'></div>
+<!-- MAP[END] -->
+
+
+<script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AjHg02e2G6MGYit05dP6NISZc9FHDaJhBkwBzFU8Rh5wK4yYcOTnAd8ootE0_vRx' async defer></script>
+<script src="https://cdn.jsdelivr.net/gh/yamazakidaisuke/BmapQuery/js/BmapQuery.js"></script>
+<script>
+//****************************************************************************************
+// BingMaps&BmapQuery
+//****************************************************************************************
+
+//Init
+function GetMap(){
+    //------------------------------------------------------------------------
+    //1. Instance
+    //------------------------------------------------------------------------
+    const map = new Bmap("#myMap");
+
+    //------------------------------------------------------------------------
+    //2. Display Map
+    //   startMap(lat, lon, "MapType", Zoom[1~20]);
+    //   MapType:[load, aerial,canvasDark,canvasLight,birdseye,grayscale,streetside]
+    //--------------------------------------------------
+    map.startMap(35.657578497221515, 139.70086269819114, "load", 12);
+
+
+    //------------------------------------------------------------------------
+    //3.Circle Add: Event
+    //  circle(int Meter, string Color ,string Color, int strokeWidth );
+    //------------------------------------------------------------------------
+    //Style Setting //ピンのカラーを指定可能
+    const style = {
+        pinColor:"#0000ff",
+        fillColor:"rgba(0,0,255,0.05)",
+        strokeWidth:5
+    };
+
+    let pin1 = map.pin(35.657578497221515, 139.70086269819114,"#fe5000");
+    let pin2 = map.pin(35.71319106418442, 139.77766016497102,"#fe5000");
+    let pin3 = map.pin(35.72911526462791, 139.71739509510442,"#fe5000");
+    let pin4 = map.pin(35.6738878159988, 139.66584812013517,"#fe5000");
+    let pin5 = map.pin(35.694742313939926, 139.70518497192484,"#fe5000");
+    let pin6 = map.pin(35.668264630469935, 139.75588378483872,"#fe5000");
+    let pin7 = map.pin(35.648761482109585, 139.7101494665773,"#fe5000");
+    
+    // Click:Event //半径の大きさとかを指定可能 ピンのクリックイベントもつけられる。
+    
+    map.circle(3000, style, "click", function(){
+        const lat = map.getCenter().latitude;  //Get MapCenter Latitude
+        const lon = map.getCenter().longitude; //Get MapCenter Longitude
+        map.infobox(lat, lon, "Title", "Description");
+        map.startMap(lat, lon,"load",12); //右端の数字は1-20でズームを設定
+    }); //3000=3Km
+    
+    map.circle(6000, style, "click", function(){
+        const lat = map.getCenter().latitude;  //Get MapCenter Latitude
+        const lon = map.getCenter().longitude; //Get MapCenter Longitude
+        map.infobox(lat, lon, "Title", "Description");
+    }); //3000=3Km
+
+    map.circle(9000, style, "click", function(){
+        const lat = map.getCenter().latitude;  //Get MapCenter Latitude
+        const lon = map.getCenter().longitude; //Get MapCenter Longitude
+        map.infobox(lat, lon, "Title", "Description");
+    }); //3000=3Km
+
+    
+    map.onPin(pin1, "click", function(){
+        map.infobox(35.657578497221515, 139.70086269819114, "SHIBUYA SAUNAS", "There are nine elaborate sauna rooms and a deep water bath where you can soak your head in");
+    });
+
+    map.onPin(pin2, "click", function(){
+        map.infobox(35.71319106418442, 139.77766016497102, "Sauna & Capsule Hotel Hokuo Ueno", "There are nine elaborate sauna rooms and a deep water bath where you can soak your head in");
+    });
+
+    map.onPin(pin3, "click", function(){
+        map.infobox(35.72911526462791, 139.71739509510442, "Times Spa Resta Ikebukuro", "There are nine elaborate sauna rooms and a deep water bath where you can soak your head in");
+    });
+
+    map.onPin(pin4, "click", function(){
+        map.infobox(35.6738878159988, 139.66584812013517, "Sasazuka Marushin Spa", "There are nine elaborate sauna rooms and a deep water bath where you can soak your head in");
+    });
+
+    map.onPin(pin5, "click", function(){
+        map.infobox(35.694742313939926, 139.70518497192484, "Shinjuku Natural Hot Spring Terumayu", "There are nine elaborate sauna rooms and a deep water bath where you can soak your head in");
+    });
+
+    map.onPin(pin6, "click", function(){
+        map.infobox(35.668264630469935, 139.75588378483872, "Oasis Sauna Astir", "There are nine elaborate sauna rooms and a deep water bath where you can soak your head in");
+    });
+
+    map.onPin(pin7, "click", function(){
+        map.infobox(35.648761482109585, 139.7101494665773, "DoC Ebisu", "There are nine elaborate sauna rooms and a deep water bath where you can soak your head in");
+    });
+}
+</script>
+</body>
+</html>

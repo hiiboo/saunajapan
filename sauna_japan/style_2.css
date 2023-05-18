@@ -1,0 +1,58 @@
+body {
+    background-image: url('./image/30467-12-7e69c1a2cd801a5038696083ff9e3dbb-3900x2602-1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+  }
+
+  .card-body {
+    color: white;
+    margin: 0 auto; /* ボタンを中央に配置する */
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(245, 235, 235);
+    font-size: 150px;
+    opacity: 1;
+    letter-spacing: 0.12em;
+  }
+
+  .btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 120px;
+    margin: auto;
+    padding: 1rem 1rem;
+    font-weight: bold;
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 100vh;
+    color: #333;
+    border: 1px solid #999;
+    text-shadow: 0 1px #fff;
+    box-shadow: 0 3px 2px 1px #fcfcfc, 0 4px 6px #cecfd1, 0 -2px 2px #cecfd1, 0 -4px 2px #eee, inset 0 0 2px 2px #cecfd1;
+    transition: 0.5s;
+  }
+
+  .btn:hover {
+    opacity: 0.5;
+  }

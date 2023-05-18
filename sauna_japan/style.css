@@ -1,0 +1,61 @@
+body{
+    background: rgb(80, 80, 80);
+}
+
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar navbar-expand-lg navbar-dark bg-maroon fixed-header {
+    color: brown;
+}
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.navbar-nav .nav-link img {
+width: 30px;
+height: 30px;
+object-fit: cover;
+border-radius: 50%;
+}
+
+.news{
+    margin-top: 60px;
+}
+
+#videoPreview video {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  .row {
+    margin: 30px;
+  }
+
+  .card{
+    border: none;
+    background: rgb(42, 50, 49);
+  }
+
+  h5{
+    font-size: 35px;
+  }
+
+  h5,p{
+    color: rgb(255, 255, 255);
+  }
+  
+  .news {
+    padding-top: 30px;
+  }
